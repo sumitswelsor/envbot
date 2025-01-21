@@ -1,0 +1,416 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>MDM EnviroBot</title><style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            height: 100vh;
+        }
+        h2
+        {
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #000;
+            padding: 10px 20px;
+            color: white;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 2;
+        }
+        .navbar img {
+            height: 40px;
+            margin-right: 20px;
+        }
+        .navbar h1 {
+            font-size: 24px;
+        }
+        button {
+            background-color: #005a9c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #004080;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            background-color: #575757;
+            padding-top: 20px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+        .sidebar a.active
+        {
+            background-color: #444;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .sidebar a img {
+            margin-right: 10px;
+            height: 24px;
+        }
+        .sidebar a:hover {
+            background-color: #444;
+        }
+        .content {
+            margin-top: 60px;
+            padding: 20px;
+            margin-left: 200px;
+            width: calc(100% - 200px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .window {
+            background: white;
+            padding: 20px;
+            width: 100%;
+            display: none;
+        }
+        .window h2 {
+            margin-top: 0;
+        }
+        .window input[type="file"],
+        .window input[type="text"],
+        .window select {
+            margin: 10px 0;
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group select {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .window button {
+            background-color: #005a9c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .window button:hover {
+            background-color: #004080;
+        }
+</style></head><body><div class="navbar"><img src="https://companieslogo.com/img/orig/INFA_BIG.D-f5919387.png?t=1636076858" alt="Informatica Logo" /><h1>EnviroBot</h1></div><div id="sidebar" class="sidebar"><a href="#" onclick="showContent('home')"><img src="https://cdn-icons-png.flaticon.com/512/1299/1299961.png" alt="Home Icon" /> Home
+</a><a href="#" onclick="showContent('apply-ebf')"><img src="https://cdn-icons-png.flaticon.com/256/9748/9748808.png" alt="Apply EBF Icon" /> Apply EBF
+</a><a href="#" onclick="showContent('deploy-app-archive')"><img src="https://cdn-icons-png.freepik.com/512/5203/5203752.png" alt="Deploy App Archive Icon" /> Deploy EBF
+</a><a href="#" onclick="showContent('create-import-ors')"><img src="https://cdn-icons-png.freepik.com/512/6471/6471822.png" alt="C&I ORS Icon" /> Create & Import ORS
+</a><a href="#" onclick="showContent('export-cl')"><img src="https://www.iconshock.com/image/Impressions/Database/export_database" alt="Export CL Icon" /> Export Changelist
+</a><a href="#" onclick="showContent('import-cl')"><img src="https://images.freeimages.com/fic/images/icons/989/ivista_2/256/download_database.png?fmt=webp&w=500" alt="Import CL Icon" />Import Changelist
+</a></div><div class="content"><div id="home" class="window" style="display: block"><h2>MDM Envirobot</h2><p>
+    Introducing <strong>MDM EnviroBot</strong>, the ultimate solution for managing your MDM environment with ease and efficiency. This innovative tool offers a sleek interface that simplifies complex tasks, making it a must-have for customers who occasionally encounter technical challenges.
+    <br>MDM EnviroBot is designed to evolve, with scalable features ensuring it grows alongside your needs. Enjoy a user-friendly interface that transforms tedious tasks into simple, efficient processes.</br></p><h3>Scope and Features:</h3><ul><li><strong>Patcher Buddy:</strong><ul><li>Installation and deployment of patches.</li><li>Effortless EBF uploads based on provided details.</li><li>Deployment verification to ensure success.</li></ul></li><li><strong>ORS Buddy:</strong><ul><li>Seamless creation of new ORS instances for well-aligned environment.</li><li>Easy import of schema.</li><li>Export and import of changelists from one environment to another.</li></ul></li></ul><h3>User Interface Highlights:</h3><ul><li><strong>Login Page:</strong><ul><li>The secure gateway for user authentication.</li><li>Smooth transition to the home page upon successful login.</li><li>JavaScript-powered client-side validation.</li></ul></li><li><strong>Home Page:</strong><ul><li>Central hub for navigating various features.</li><li>Intuitive and engaging interface for a great user experience.</li></ul></li><li><strong>Apply EBF:</strong><ul><li>EBF automation process for streamlined patch management.</li><li>Log display for real-time feedback on operations and processes.</li></ul></li><li><strong>Create & Import ORS:</strong><ul><li>Creates ORS with the server details.</li><li>Import the schema over it in a single click.</li></ul></li><li><strong>Export & Import Changelist:</strong><ul><li>Export the changelist from one environment and import it into the newly created ORS.</li><li>Validation runs in the backend during the export process.</li></ul></li></ul></div><div id="apply-ebf" class="window"><h2>Apply EBF</h2><form id="upload-form" method="post" enctype="multipart/form-data"><h4>Select to apply or remove EBF</h4><input type="file" id="ebf-upload" name="file" accept=".zip" required/><h4>Select Application Server</h4><select id="app_server" name="app_server"><option value=""></option><option value="Jboss">Jboss</option><option value="Weblogic">Weblogic</option><option value="Websphere">Websphere</option></select><h4>Destination directory of server</h4><h5>Eg.: C:\\infamdm\\hub\\server</h5><input type="text" id="dest-dir" name="destDir" placeholder="Enter the path with two slashes"/><h4>Select to apply or remove EBF</h4><select id="rollback" name="rollback"><option value=""></option><option value="0">Apply</option><option value="1">Rollback</option></select><button type="submit">Upload and Apply</button></form><div id="log-output" style="display:none; margin-top:20px;"><h3>Log Output</h3><pre id="logContent" style="height: 300px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px;"></pre></div><div id="deploy-section" style="display:none; margin-top:20px;"><h3>Deployment</h3><form id="deploy-form" method="post" action="/deploy"><h4>Directory for Deployment</h4><input type="text" id="deploy-dir" name="deployDir" placeholder="Enter the deployment directory" required/><button type="submit">Deploy Patch</button>
+    </form>
+    </div>
+    </div>
+    <div id="deploy-app-archive" class="window" style="display:none;">
+        <h2>Deploy EBF</h2>
+        <form id="deploy-archive-form" method="post">
+            <h4>MDM Server/Cleanse Directory</h4>
+            <div class="form-group">
+            <input type="text" id="hubserver-dir" name="hubserverDir" placeholder="Enter the MDM hubserver/cleanse directory" required/>
+            </div>
+            
+            <h4>Database Password</h4>
+            <div class="form-group">
+                <input type="password" id="db-password" name="dbPassword" placeholder="Enter the database password" required/>
+            </div>
+            
+            <h4>Avos Username</h4>
+            <div class="form-group">
+            <input type="text" id="avos-username" name="avosUsername" placeholder="Enter the avos username" required/>
+            </div>
+            <h4>Avos Password</h4>
+            <div class="form-group">
+            <input type="password" id="avos-password" name="avosPassword" placeholder="Enter the avos password" required/>
+            </div>
+            <h4>JDBC Password</h4>
+            <div class="form-group">
+            <input type="password" id="jdbc-password" name="jdbcPassword" placeholder="Enter the JDBC password" required/>
+            </div>
+            <br>
+            &nbsp
+            <button type="submit">Deploy</button>
+        </form>
+    </div>
+    <div id="create-import-ors" class="window">
+        <h2>Create and Import ORS</h2>
+        <div class="form-group">
+            <label for="type">DB Type:</label>
+            <select id="type" name="type" onchange="toggleFields()">
+                <option value="">Select Database Server</option>
+                <option value="sql">MS SQL</option>
+                <option value="orcl">Oracle</option>
+            </select>
+        </div>
+    <!-- Fields for 'MS SQL' type -->
+    <div id="sql" style="display: none">
+        <div class="form-group">
+            <label for="usern">Username:</label>
+            <input type="text" id="usern" name="un" />
+        </div>
+        <div class="form-group">
+            <label for="passwd">Password:</label>
+            <input type="password" id="passwd" name="pwd" />
+        </div>
+        <div class="form-group">
+            <label for="ors-db-hostname">Enter the Operational Reference Store DB hostname:</label>
+            <input type="text" id="ors-db-hostname" name="orsDbHostname" />
+        </div>
+        <div class="form-group">
+            <label for="ors-db-port">Enter the Operational Reference Store DB port number:</label>
+            <input type="text" id="ors-db-port" name="orsDbPort" />
+        </div>
+        <div class="form-group">
+            <label for="ors-db-name">Enter the Operational Store database name:</label>
+            <input type="text" id="ors-db-name" name="orsDbName" />
+        </div>
+        <div class="form-group">
+            <label for="cmx-ors-db-path">Enter CMX_ORS Database path:</label>
+            <input type="text" id="cmx-ors-db-path" name="cmxOrsDbPath" />
+        </div>
+        <div class="form-group">
+            <label for="cmx-system-collation">Enter CMX_SYSTEM DB collation name:</label>
+            <input type="text" id="cmx-system-collation" name="cmxSystemCollation" />
+        </div>
+        <div class="form-group">
+            <label for="ors-db-password">Enter the Operational Reference Store DB user password:</label>
+            <input type="password" id="ors-db-password" name="orsDbPassword" />
+        </div>
+        <div class="form-group">
+            <label for="dba-username">Enter DBA username:</label>
+            <input type="text" id="dba-username" name="dbaUsername" />
+        </div>
+        <div class="form-group">
+            <label for="orcl-dba-password">Enter the DBA password:</label>
+            <input type="password" id="orcl-dba-password" name="orclDbaPassword" />
+        </div>
+        <div class="form-group">
+            <label for="locale">Enter locale name:</label>
+            <input type="text" id="locale" name="locale" />
+        </div>
+        <div class="form-group">
+            <label for="granularity">Enter integer code for ORS Timeline Granularity:</label>
+            <input type="text" id="granularity" name="granularity" />
+        </div>
+    </div>
+    <!-- Fields for 'Oracle' type -->
+    <div id="orcl" style="display: none">
+        <div class="form-group">
+            <label for="uname">Username:</label>
+            <input type="text" id="uname" name="un" />
+        </div>
+        <div class="form-group">
+            <label for="pword">Password:</label>
+            <input type="password" id="pword" name="pwd" />
+        </div>
+        <div class="form-group">
+            <label for="db-hostname">Enter the DB hostname:</label>
+            <input type="text" id="db-hostname" name="dbHostname" />
+        </div>
+        <div class="form-group">
+            <label for="db-port">Enter the DB port number:</label>
+            <input type="text" id="db-port" name="dbPort" />
+        </div>
+        <div class="form-group">
+            <label for="oracle-conntype">Enter Oracle Connection Type:</label>
+            <select id="oracle-conntype" name="oracleConnType" onchange="toggleOracleFields()">
+                <option value="">Select connection</option>
+                <option value="service">Service</option>
+                <option value="SID">SID</option>
+            </select>
+        </div>
+        <div id="service-fields" style="display: none">
+            <div class="form-group">
+                <label for="db-service-name">Enter the DB Service name:</label>
+                <input type="text" id="db-service-name" name="dbServiceName" />
+            </div>
+        </div>
+        <div id="sid-fields" style="display: none">
+            <div class="form-group">
+                <label for="db-sid">Enter the DB SID:</label>
+                <input type="text" id="db-sid" name="dbSid" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tns-name">Enter Oracle Net Connect identifier (TNS Name):</label>
+            <input type="text" id="tns-name" name="tnsName" />
+        </div>
+        <div class="form-group">
+            <label for="connecturl">Connect URL:</label>
+            <input type="text" id="connecturl" name="connectUrl" />
+        </div>
+        <div class="form-group">
+            <label for="ors-schema">Enter the Operational Reference Store DB user name (schema name):</label>
+            <input type="text" id="ors-schema" name="orsSchema" />
+        </div>
+        <div class="form-group">
+            <label for="ors-password">Enter the Operational Reference Store DB user password:</label>
+            <input type="password" id="ors-password" name="orsSchemaPassword" />
+        </div>
+        <div class="form-group">
+            <label for="dba-password">Enter the DBA password:</label>
+            <input type="password" id="dba-password" name="dbaPassword" />
+        </div>
+        <div class="form-group">
+            <label for="timeline">Enter integer code for ORS Timeline Granularity:</label>
+            <input type="text" id="timeline" name="timeline" />
+        </div>
+    </div>
+    <button onclick="createandimportOrs()">Create and Import ORS</button>
+    <div id="export-cl" class="window">
+    <h2>Export Changelist</h2>
+    </div>
+    <div id="import-cl" class="window">
+    <h2>Import Changelist</h2>
+    </div>
+<script>
+    function toggleFields() {
+        const type = document.getElementById("type").value;
+        const sqlFields = document.getElementById("sql");
+        const orclFields = document.getElementById("orcl");
+
+        if (type === "sql") {
+            sqlFields.style.display = "block";
+            orclFields.style.display = "none";
+        } else if (type === "orcl") {
+            sqlFields.style.display = "none";
+            orclFields.style.display = "block";
+        } else {
+            sqlFields.style.display = "none";
+            orclFields.style.display = "none";
+        }
+            }
+
+
+    function toggleOracleFields() {
+    var connectionType = document.getElementById('oracle-conntype').value;
+    var serviceFields = document.getElementById('service-fields');
+    var sidFields = document.getElementById('sid-fields');
+
+    if (connectionType === 'service') {
+        serviceFields.style.display = 'block';
+        sidFields.style.display = 'none';
+    } else if (connectionType === 'SID') {
+        serviceFields.style.display = 'none';
+        sidFields.style.display = 'block';
+    } else {
+        serviceFields.style.display = 'none';
+        sidFields.style.display = 'none';
+    }
+}
+    function showContent(contentId) {
+        var windows = document.querySelectorAll('.window');
+        windows.forEach(function(win) {
+            win.style.display = 'none';
+        });
+        document.getElementById(contentId).style.display = 'block';
+
+        // Remove active class from all menu items
+        var menuItems = document.querySelectorAll('.sidebar a');
+        menuItems.forEach(function(menuItem) {
+            menuItem.classList.remove('active');
+        });
+
+        // Add active class to the clicked menu item
+        var activeMenuItem = document.querySelector('.sidebar a[onclick="showContent(\'' + contentId + '\')"]');
+        if (activeMenuItem) {
+            activeMenuItem.classList.add('active');
+        }
+    }
+    document.getElementById('upload-form').addEventListener('submit', function(event) {
+        alert("Process started, verify log output for END time,if detected verify version-info xml then refresh and use deploy option to upload patch to the server");
+        event.preventDefault(); // Prevent default form submission
+        document.getElementById('log-output').style.display = 'block';
+        const logContent = document.getElementById('logContent');
+        logContent.textContent = '';
+
+        const formData = new FormData(this);
+
+        // Send the form data via AJAX
+        fetch('/upload', {
+            method: 'POST',
+            body: formData
+        }).then(response => response.text())
+          .then(result => {
+              console.log(result); // Log the response if needed
+              // Start listening to the log stream
+              const eventSource = new EventSource('/stream-log');
+              eventSource.onmessage = function(event) {
+                  logContent.textContent += event.data + '\n';
+                  logContent.scrollTop = logContent.scrollHeight; // Scroll to the bottom
+                  if (event.data.includes("Command completed. Ready for next step.")) {
+                      document.getElementById('deploy-section').style.display = 'block';
+                      eventSource.close();
+                  }
+              };
+              eventSource.onerror = function() {
+                  console.error('Error occurred while fetching log updates.');
+                  eventSource.close();
+              };
+          }).catch(error => {
+              console.error('Error during file upload:', error);
+          });
+    });
+
+
+    document.getElementById('deploy-archive-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const formData = new FormData(this);
+        const params = new URLSearchParams();
+        formData.forEach((value, key) => {
+            params.append(key, value);
+        });
+
+        fetch('/deployArchive', {
+            method: 'POST',
+            body: params
+        }).then(response => response.text())
+          .then(result => {
+              alert(result); // Show the response from the server
+          }).catch(error => {
+              console.error('Error during deployment:', error);
+          });
+    });
+
+
+</script>
+</body>
+</html>
